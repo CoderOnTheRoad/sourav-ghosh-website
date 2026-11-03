@@ -1,10 +1,12 @@
 name = "sourav-website-publisher"
 main = "auth-worker.mjs"
 compatibility_date = "2026-11-01"
+preview_urls = false
 # Set these non-secret variables for your actual repository and Pages URL.
 [vars]
 GITHUB_OWNER = "CoderOnTheRoad"
 GITHUB_REPO = "sourav-ghosh-website"
 SITE_ORIGIN = "https://coderontheroad.github.io"
 ADMIN_URL = "https://coderontheroad.github.io/sourav-ghosh-website/admin.html"
-# Configure GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET and SESSION_SECRET as Worker secrets.
+GITHUB_CLIENT_ID = "Ov23li6YWaBDbOWIl1FV"
+# Configure GITHUB_CLIENT_SECRET and SESSION_SECRET as Worker secrets.

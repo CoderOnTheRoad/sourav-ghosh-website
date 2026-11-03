@@ -4,7 +4,9 @@
 
 In the website editor, open Publish → Download publishing file. It produces `shared-profile.json`, containing your current draft, CV details and figures. Choose Open GitHub upload, select that file, and commit the update to the main branch. GitHub Pages deploys automatically. No Cloudflare account is required for this route. A website backup has a different purpose; use the dedicated publishing file.
 
-## Sign-in publishing (one-time setup)
+## Sign-in publishing
+
+The live website is connected to `https://sourav-website-publisher.souravdotg2.workers.dev`. Open the website editor → Publish → Sign in with GitHub, then review and publish your draft. Only `CoderOnTheRoad` can publish. The instructions below describe how to recreate the service.
 
 Create your own Cloudflare account at https://dash.cloudflare.com/sign-up and verify your email. Account registration and accepting its terms must be completed by you. Once signed in, the Worker and GitHub OAuth connection below can be configured. Do not share your password or secret keys in chat.
 
@@ -22,6 +24,7 @@ Set these non-secret Worker variables:
 - `GITHUB_REPO`: `sourav-ghosh-website`
 - `SITE_ORIGIN`: `https://coderontheroad.github.io`
 - `ADMIN_URL`: `https://coderontheroad.github.io/sourav-ghosh-website/admin.html`
+- `GITHUB_CLIENT_ID`: the public OAuth app client ID (configured in `server/wrangler.toml`).
 
 The origin excludes the path; ADMIN_URL includes the actual project path. Record the Worker's HTTPS URL.
 
@@ -38,7 +41,6 @@ The application requests `public_repo` so your authenticated GitHub session can 
 
 Use Cloudflare's secret settings (or `wrangler secret put`) to set:
 
-- `GITHUB_CLIENT_ID`
 - `GITHUB_CLIENT_SECRET`
 - `SESSION_SECRET`: a random 32-byte value encoded as base64; generate it locally using `openssl rand -base64 32` and place it directly in the Worker secret setting. Never commit it or paste it into chat.
 
@@ -52,4 +54,4 @@ Open `admin.html` → Publish → Sign in with GitHub. After authorization, revi
 
 ## Current state
 
-`authBase` is intentionally empty until a real publishing service and OAuth App have been configured. The UI reports this and disables sign-in/publishing. No simulated login or false success is shown.
+The Worker and GitHub OAuth app are configured, and `publish-config.json` points to the live service. Credentials are stored in Cloudflare, never in this repository. Manual GitHub upload remains available as an alternative.
