@@ -14,7 +14,19 @@ if(!Array.isArray(w.customPages)||w.customPages.length>30||!w.customPages.every(
 return lists.every(k=>Array.isArray(w[k])&&w[k].length<=1000&&new Set(w[k].map(e=>e.id)).size===w[k].length&&w[k].every(e=>e&&typeof e.id==='string'&&Object.values(e).every(v=>typeof v==='string')&&(!e.url||!!safeURL(e.url))&&(!e.image||!!imageURL(e.image))))}
 function publications(data){return data.cv.sections.filter(s=>s.type==='publication'&&data.website.sectionVisibility[s.id]!==false).flatMap(s=>s.entries)}
 function visibleSections(data){return data.cv.sections.filter(s=>data.website.sectionVisibility[s.id]!==false)}
-const Model={clone,lists,safeURL,imageURL,validCV,valid,publications,visibleSections};root.ProfileModel=Model;if(typeof module==='object'&&module.exports)module.exports=Model;
+function importCV(data,backup){
+if(!valid(data)||!validCV(backup))throw Error('Choose a valid CV-maker JSON backup.');
+const next=clone(data),oldPapers=data.cv.sections.filter(s=>s.type==='publication').flatMap(s=>s.entries),newPapers=backup.sections.filter(s=>s.type==='publication').flatMap(s=>s.entries);
+const doi=v=>String(v||'').trim().toLowerCase().replace(/^https?:\/\/(?:dx\.)?doi\.org\//,'');const title=v=>String(v||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const match=old=>newPapers.find(e=>doi(old.doi)&&doi(e.doi)===doi(old.doi))||newPapers.find(e=>e.id===old.id)||newPapers.find(e=>title(old.title)&&title(e.title)===title(old.title));
+const ids=new Map(oldPapers.map(e=>[e.id,match(e)?.id]));
+next.website.publicationImages=Object.fromEntries(Object.entries(data.website.publicationImages).map(([id,img])=>[ids.get(id),img]).filter(([id])=>id));
+next.website.featuredIds=data.website.featuredIds.map(id=>ids.get(id)).filter(Boolean);
+next.website.sectionVisibility=Object.fromEntries(backup.sections.map(s=>{const previous=data.cv.sections.find(o=>o.id===s.id)||data.cv.sections.find(o=>o.title===s.title);return [s.id,previous?data.website.sectionVisibility[previous.id]!==false:true]}));
+next.cv=Object.fromEntries(['version','profile','settings','sections'].map(k=>[k,clone(backup[k])]));
+if(!valid(next))throw Error('The imported profile could not be validated.');return next;
+}
+const Model={clone,lists,safeURL,imageURL,validCV,valid,publications,visibleSections,importCV};root.ProfileModel=Model;if(typeof module==='object'&&module.exports)module.exports=Model;
 if(typeof document==='undefined')return;
 let dbPromise;function db(){return dbPromise||(dbPromise=new Promise((resolve,reject)=>{const request=indexedDB.open('sourav-personal-website',1);request.onupgradeneeded=()=>request.result.createObjectStore('profiles');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error)}))}
 async function read(){const database=await db();return new Promise((resolve,reject)=>{const r=database.transaction('profiles').objectStore('profiles').get('draft');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}

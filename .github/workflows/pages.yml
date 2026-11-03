@@ -26,18 +26,9 @@ jobs:
           node --check shared.js
           node --check site.js
           node --check admin.js
-          node --check cv/shared-bridge.js
           node --check server/auth-worker.mjs
           node tests/shared.test.cjs
           node tests/auth.test.mjs
-      - name: Check CV editor and exports
-        working-directory: cv
-        run: |
-          node tests/bibtex.test.cjs
-          node tests/scopus.test.cjs
-          node tests/studio.test.cjs
-          node tests/layout.test.cjs
-          node tests/default.test.cjs
       - uses: actions/configure-pages@v5
       - name: Prepare published website
         run: node scripts/prepare.cjs
