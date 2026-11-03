@@ -1,4 +1,14 @@
-# Enable owner publishing from the editor
+# Publishing options
+
+## Publish through GitHub (available now)
+
+In the website editor, open Publish → Download publishing file. It produces `shared-profile.json`, containing your current draft, CV details and figures. Choose Open GitHub upload, select that file, and commit the update to the main branch. GitHub Pages deploys automatically. No Cloudflare account is required for this route. A website backup has a different purpose; use the dedicated publishing file.
+
+## Sign-in publishing (one-time setup)
+
+Create your own Cloudflare account at https://dash.cloudflare.com/sign-up and verify your email. Account registration and accepting its terms must be completed by you. Once signed in, the Worker and GitHub OAuth connection below can be configured. Do not share your password or secret keys in chat.
+
+### Service configuration
 
 The public website is hosted on GitHub Pages. GitHub Pages cannot run OAuth callback code, so the publishing service runs separately as a Cloudflare Worker. No passwords, tokens or OAuth secrets belong in this repository.
 
