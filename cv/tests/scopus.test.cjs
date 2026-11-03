@@ -1,0 +1,27 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const {parse,csvRows,fullAuthors,shortAuthors}=require('../scopus.js');
+const {duplicate}=require('../bibtex.js');
+const header='Authors,Author full names,Title,Year,Source title,Volume,Issue,Art. No.,Page start,Page end,DOI,EID,Document Type,Publication Stage';
+const row=['Ghosh S.; Doe J.','Ghosh, Sourav (58591714000); Doe, Jane (12345)','A title, with "quoted" words\nand a line break','2026','Test Journal','12','3','','101','115','https://doi.org/10.1234/test','2-s2.0-test','Article','Final'];
+const quote=v=>'"'+v.replace(/"/g,'""')+'"';
+const source='\uFEFF'+header+'\r\n'+row.map(quote).join(',')+'\r\n\r\n';
+const parsed=parse(source);assert.equal(parsed.records.length,1);const p=parsed.records[0];assert.equal(p.title,'A title, with "quoted" words and a line break');assert.equal(p.authors,'Sourav Ghosh; Jane Doe');assert.equal(p.pages,'101–115');assert.equal(p.doi,'10.1234/test');assert.equal(p.journal,'Test Journal');assert.equal(p.volume,'12');assert.equal(p.issue,'3');assert.match(p.source,/Scopus CSV.*2-s2.0-test/);assert.equal(p.review,'');assert.equal(p.metrics,'');
+assert.equal(fullAuthors('Józsa, Máté (57225219133); Néda, Zoltán (7004903782)'),'Máté Józsa; Zoltán Néda');
+assert.equal(shortAuthors('Ghosh S.; van der Waals J.D.; Doe J.'),'S. Ghosh; J.D. van der Waals; J. Doe');
+assert.equal(shortAuthors('Ghosh S., Iqbal A., Thapa R.'),'S. Ghosh; A. Iqbal; R. Thapa');
+const article=parse('Title,Source title,Authors,Art. No.,Year\nArticle,Journal,Ghosh S.,e202500489,2026');assert.equal(article.records[0].pages,'e202500489');assert.match(article.records[0].review,/DOI not supplied/);
+assert.equal(parse('Title,Source title,Authors,Page start,Page end\nSame page,Journal,Ghosh S.,22,22').records[0].pages,'22');
+assert.equal(csvRows('a,b\r1,2\r').length,2);
+assert.throws(()=>parse('Name,Email\nJane,j@example.com'),/Scopus publication columns/);
+assert.throws(()=>parse(header+'\n"Unclosed'),/Unclosed quoted/);
+assert.throws(()=>parse('Title,Source title,Authors\n"Bad"extra,Journal,Name'),/Unexpected text/);
+assert.throws(()=>parse('Title,Source title,Authors\nBad"quote,Journal,Name'),/Unexpected quote/);
+assert.throws(()=>parse('Title,Source title,Authors\nGood,Journal,Name\nBad,Journal'),/No publications were added/);
+assert.throws(()=>parse('Title,Source title,Authors,Title\nOne,Journal,Name,Two'),/Repeated CSV column/);
+assert.throws(()=>parse(''),/No publication rows/);
+const skipped=parse('Title,Source title,Authors\n,Journal,Name\nValid,Journal,Name');assert.equal(skipped.records.length,1);assert.match(skipped.warnings[0],/Skipped CSV row 2/);
+assert.equal(parse('Title,Source title,Authors\n"<img src=x onerror=alert(1)>",Journal,Name').records[0].title,'<img src=x onerror=alert(1)>');
+assert.equal(duplicate({title:'Different title',doi:'10.1234/test'},[p]),'Matching DOI');
+if(process.argv[2]){const actual=parse(fs.readFileSync(process.argv[2],'utf8'));assert.equal(actual.records.length,12);assert.equal(actual.records[0].pages,'21406–21419');assert.match(actual.records[0].authors,/Sourav Ghosh/);assert.ok(!actual.records[0].authors.includes('58591714000'));assert.equal(actual.records[2].pages,'495');assert.equal(actual.records[5].pages,'e202500489');assert.equal(actual.records[6].pages,'168044');assert.match(actual.records[2].authors,/Máté Józsa; Zoltán Néda/);console.log('Supplied Scopus CSV: all 12 records parsed and field mappings verified.');}
+console.log('Scopus CSV parser tests passed.');

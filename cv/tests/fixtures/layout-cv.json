@@ -1,0 +1,393 @@
+{
+  "version": 1,
+  "profile": {
+    "name": "Sourav Ghosh",
+    "role": "Ph.D. Researcher · Computational Materials Physics",
+    "email": "sourav_ghosh@srmap.edu.in",
+    "email2": "sourav.gsh01@gmail.com",
+    "phone": "+91 8145777635",
+    "address": "X-203, Computational Research Laboratory\nSRM University – AP, Andhra Pradesh 522502, India",
+    "website": "",
+    "orcid": ""
+  },
+  "settings": {
+    "fontSize": "11",
+    "showMetrics": false
+  },
+  "sections": [
+    {
+      "id": "profile",
+      "title": "Research profile",
+      "type": "general",
+      "visible": true,
+      "entries": [
+        {
+          "id": "profile-0",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Expert in DFT-based catalytic materials discovery, leveraging machine learning and high-performance computing for accelerated insights."
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "type": "general",
+      "visible": true,
+      "entries": [
+        {
+          "id": "education-0",
+          "title": "Ph.D. in Physics (ongoing)",
+          "organization": "SRM University – AP, Andhra Pradesh",
+          "date": "November 2022 – Present",
+          "details": "Supervisor: Prof. Ranjit Thapa"
+        },
+        {
+          "id": "education-1",
+          "title": "Integrated B.Sc. and M.Sc. (BS–MS), Physics Major",
+          "organization": "Indian Institute of Science Education and Research Bhopal (IISER Bhopal)",
+          "date": "",
+          "details": "Bhopal, Madhya Pradesh 462066, India"
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "title": "Research experience",
+      "type": "general",
+      "visible": true,
+      "entries": [
+        {
+          "id": "research-0",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Experienced in first-principles modeling and data-driven materials discovery for catalysis, with a primary focus on density functional theory (DFT)-based investigations of electrocatalytic and photocatalytic systems. Research involves the design and analysis of single-atom catalysts, covalent organic frameworks, and low-dimensional materials, with emphasis on reaction energetics, electronic structure (PDOS, d-band center, orbital interactions), and reaction mechanisms. Proficient in integrating machine learning with high-throughput DFT calculations to accelerate catalyst screening and performance prediction. Extensive experience in high-performance computing (HPC) environments, large-scale simulations, workflow automation, and advanced data analysis for materials discovery."
+        }
+      ]
+    },
+    {
+      "id": "interests",
+      "title": "Research interests",
+      "type": "general",
+      "visible": true,
+      "entries": [
+        {
+          "id": "interests-0",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "DFT-driven catalytic materials discovery"
+        },
+        {
+          "id": "interests-1",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Machine learning–accelerated catalyst design"
+        },
+        {
+          "id": "interests-2",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Single-atom and low-dimensional catalytic systems"
+        },
+        {
+          "id": "interests-3",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Electrocatalytic and photocatalytic reaction mechanisms"
+        },
+        {
+          "id": "interests-4",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "High-performance computing for large-scale simulations"
+        }
+      ]
+    },
+    {
+      "id": "publications",
+      "title": "Publications",
+      "type": "publication",
+      "visible": true,
+      "entries": [
+        {
+          "id": "publications-0",
+          "authors": "Sourav Ghosh; Asif Iqbal; Ranjit Thapa",
+          "title": "Symmetry-Dependent Orbital Involvement Governing C2 Selectivity in CO/CO2 Reduction on MNxB Single-Atom Catalysts",
+          "journal": "The Journal of Physical Chemistry Letters",
+          "year": "",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "doi": "",
+          "metrics": "Nature Indexed; Q1; IF 4.7",
+          "review": "Confirm year, volume, pages, DOI and publication status.",
+          "source": "Symmetry-Dependent Orbital Involvement Governing C2 Selectivity in CO/CO2 Reduction on MNxB Single-Atom Catalysts Sourav Ghosh, Asif Iqbal, Ranjit Thapa, The Journal of Physical Chemistry Letters, Nature Indexed, Q1, IF-4.7"
+        },
+        {
+          "id": "publications-1",
+          "authors": "A. Mandal; S. Mondal; A. Singha; A. S. Rane; S. Ghosh; R. Thapa; A. Bhaumik; B. Chowdhury",
+          "title": "Synthesis of 2-Imidazolidinone from Ethylenediamine using CO2 as a C1 building block over the SnO2/gC3N4 catalyst",
+          "journal": "Chemical Communications",
+          "year": "2026",
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "doi": "",
+          "metrics": "Q1; IF 4.2",
+          "review": "Confirm volume, pages and DOI.",
+          "source": "Mandal, A., Mondal, S., Singha, A., Rane, A.S., Ghosh, S., Thapa, R., Bhaumik, A. and Chowdhury, B., 2026. Synthesis of 2-Imidazolidinone from Ethylenediamine using CO 2 as a C1 building block over the SnO 2/gC 3 N 4 catalyst. Chemical Communications. Q1, IF-4.2"
+        },
+        {
+          "id": "publications-2",
+          "authors": "J. Chen; M. H. Chowdhury; S. Ghosh; R. Thapa; M. Bertino; K. M. Tibbetts; W. N. Wang",
+          "title": "Palladium-enhanced copper nitride anti-perovskite nanocrystals boosting CO2 electroreduction to C2 products",
+          "journal": "Chemical Engineering Journal",
+          "year": "2025",
+          "volume": "",
+          "issue": "",
+          "pages": "168044",
+          "doi": "",
+          "metrics": "Q1; IF 13.2",
+          "review": "Source contains an unrelated title fragment before this citation. Confirm title, volume and DOI.",
+          "source": "Site specific descriptors for oxygen evolution reaction activity on Chen, J., Chowdhury, M.H., Ghosh, S., Thapa, R., Bertino, M., Tibbetts, K.M. and Wang, W.N., 2025. Palladium-enhanced copper nitride anti-perovskite nanocrystals boosting CO2 electroreduction to C2 products. Chemical Engineering Journal, p.168044. Q1, IF-13.2"
+        },
+        {
+          "id": "publications-3",
+          "authors": "Erakulan E. Siddharthan; Sourav Ghosh; Ranjit Thapa",
+          "title": "Site specific descriptors for oxygen evolution reaction activity on single atom catalysts using QMML",
+          "journal": "Journal of Materials Chemistry A",
+          "year": "2024",
+          "volume": "12",
+          "issue": "30",
+          "pages": "19176–19186",
+          "doi": "",
+          "metrics": "Q1; IF 9.5",
+          "review": "Confirm DOI.",
+          "source": "Site specific descriptors for oxygen evolution reaction activity on single atom catalysts using QMML. Siddharthan, Erakulan E., Sourav Ghosh, and Ranjit Thapa. Journal of Materials Chemistry A 12, no. 30 (2024): 19176-19186. Q1, IF-9.5"
+        },
+        {
+          "id": "publications-4",
+          "authors": "E. E. Siddharthan; S. Ghosh; R. Thapa",
+          "title": "Bond exchange mechanism: unveiling the Volmer–Tafel pathway and an electronic descriptor for predicting hydrogen evolution reaction activity of borophene",
+          "journal": "ACS Applied Energy Materials",
+          "year": "2023",
+          "volume": "6",
+          "issue": "17",
+          "pages": "8941–8948",
+          "doi": "",
+          "metrics": "Q1; IF 5.6",
+          "review": "Confirm DOI.",
+          "source": "Siddharthan, E.E., Ghosh, S. and Thapa, R., 2023. Bond exchange mechanism: unveiling the volmer–tafel pathway and an electronic descriptor for predicting hydrogen evolution reaction activity of borophene. ACS Applied Energy Materials, 6(17), pp.8941-8948. Q1, IF-5.6"
+        },
+        {
+          "id": "publications-5",
+          "authors": "Tsukasa Irie; Jonas F. Pöhls; Saikat Das; Jin Sakai; Kohki Sasaki; Mika Nozaki; Yu Zhao; Luming Yang; Marina Bennati; Sourav Ghosh; Ranjit Thapa; Roland A. Fischer; R. Thomas Weitz; Qianrong Fang; Yuichi Negishi",
+          "title": "A Redox-Active Tetrathiafulvalene-Based 3D Covalent Organic Framework with scu Topology for Controllable Charge Transport",
+          "journal": "Small Science",
+          "year": "",
+          "volume": "6",
+          "issue": "",
+          "pages": "e202500489",
+          "doi": "",
+          "metrics": "Q1; IF 8.3",
+          "review": "Confirm publication year and DOI.",
+          "source": "A Redox‐Active Tetrathiafulvalene‐Based 3D Covalent Organic Framework with scu Topology for Controllable Charge Transport, Tsukasa Irie, Jonas F. Pöhls, Saikat Das, Jin Sakai, Kohki Sasaki, Mika Nozaki, Yu Zhao, Luming Yang, Marina Bennati, Sourav Ghosh, Ranjit Thapa, Roland A. Fischer, R. Thomas Weitz, Qianrong Fang, Yuichi Negishi, Small Science  , 6, e202500489, Q1, IF-8.3"
+        },
+        {
+          "id": "publications-6",
+          "authors": "S. Biswas; B. K. Chakrabarti; A. Ghosh; S. Ghosh; M. Józsa; Z. Néda",
+          "title": "Does Excellence Correspond to Universal Inequality Level?",
+          "journal": "Entropy",
+          "year": "2025",
+          "volume": "27",
+          "issue": "5",
+          "pages": "495",
+          "doi": "",
+          "metrics": "Q2; IF 2.0",
+          "review": "Confirm DOI.",
+          "source": "Does Excellence Correspond to Universal Inequality Level?. Biswas, S., Chakrabarti, B.K., Ghosh, A., Ghosh, S., Józsa, M. and Néda, Z., 2025. Entropy, 27(5), p.495. Q2, IF-2.0"
+        }
+      ]
+    },
+    {
+      "id": "conferences",
+      "title": "Conferences & poster presentations",
+      "type": "general",
+      "visible": true,
+      "entries": [
+        {
+          "id": "conferences-0",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "2025 Empowering Connectivity in Chemistry-Thailand-Taiwan Bilateral Symposium: Chemistry as a Bridge to Sustainability: participated and presented poster titled “Tuning orbital interactions to promote C-C coupling toward C2 products in single-atom catalysts” held at Bangkok, Thailand, during September 30th- October 3rd, 2025."
+        },
+        {
+          "id": "conferences-1",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Namma PSI-K: participated and Presented poster in the “Bond Exchange Mechanism: Unveiling the Volmer-Tafel Pathway and an Electronic Descriptor for Predicting Hydrogen Evolution Reaction (HER) Activity of Borophene” held at IISC Bangalore and JNCSAR Bangalore during 24-28  July, 2023."
+        },
+        {
+          "id": "conferences-2",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "AAPALI PSI-K 2025: participated and Presented poster titled “M-NxB SAC Catalysts with CO gas as Reactant Selective Towards C2 Product” held at IISER Pune during 19-21 May, 2025."
+        },
+        {
+          "id": "conferences-3",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "DAE-BRNS Symposium on Current Trends in Theoretical Chemistry (CTTC-2024): participated and Presented poster in the conference titled “Site Specific Descriptor for Metals for Oxygen Evolution Reaction Activity on Single Atom Catalysts Using QMML” held at Bhabha Atomic Research Centre, Mumbai during 26-28 September, 2024."
+        },
+        {
+          "id": "conferences-4",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "INanoEChem 2025- participated and presented poster titled “Tuning orbital interactions to promote C-C coupling toward C2 products in single‐atom catalysts” held at INST Mohali, during 18th-19th  November 2025"
+        },
+        {
+          "id": "conferences-5",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "National Conference on Electronic Structure (NCES 2024): participated and Presented poster in the conference titled “Site Specific Descriptor for Metals for Oxygen Evolution Reaction Activity on Single Atom Catalysts Using QMML” held at SRM University AP during 21-23, November, 2024."
+        },
+        {
+          "id": "conferences-6",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "ICMG-III: participated and Presented poster titled “Bond Exchange Mechanism: Unveiling the Volmer-Tafel Pathway and an Electronic Descriptor for Predicting Hydrogen Evolution Reaction (HER) Activity of Borophene” held at SRM University AP during 22-24 February, 2024. I have also volunteered actively in this conference."
+        }
+      ]
+    },
+    {
+      "id": "seminars",
+      "title": "Seminars & research presentations",
+      "type": "general",
+      "visible": true,
+      "entries": [
+        {
+          "id": "seminars-0",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Research Scholars’ Summit: participated and given oral presentation in Research Scholars’ Summit titled “Bond Exchange Mechanism: Unveiling the Volmer-Tafel Pathway and an Electronic Descriptor for Predicting Hydrogen Evolution Reaction (HER) Activity of Borophene” held at SRM University AP on 13th April, 2024."
+        },
+        {
+          "id": "seminars-1",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Research Scholars’ Summit: participated and Presented poster in the in Research Scholars’ Summit titled “Site Specific Descriptor for Metals for Oxygen Evolution Reaction Activity on Single Atom Catalysts Using QMML” held at SRM University AP on 20th-21st December, 2024."
+        },
+        {
+          "id": "seminars-2",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Research Day: participated and delivered oral presentation titled “Site Specific Descriptor for Metals for Oxygen Evolution Reaction Activity on Single Atom Catalysts Using QMML” held at SRM University AP on 9th  March, 2025."
+        }
+      ]
+    },
+    {
+      "id": "schools",
+      "title": "Schools & training",
+      "type": "general",
+      "visible": true,
+      "entries": [
+        {
+          "id": "schools-0",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "School on Modelling and Simulations of Materials: participated and Presented poster in the DAE- School on Modelling and Simulations of Materials (January 20-22, 2025)  titled “Site Specific Descriptor for Metals for Oxygen Evolution Reaction Activity on Single Atom Catalysts Using QMML” held at Jawaharlal Nehru Centre for Advanced Scientific Research, Theoretical Sciences Unit (TSU), Jakkur Post, Bangalore - 560 064, INDIA"
+        }
+      ]
+    },
+    {
+      "id": "awards",
+      "title": "Honours & scholarships",
+      "type": "general",
+      "visible": true,
+      "entries": [
+        {
+          "id": "awards-0",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Secured position in top 1% of students in WBCHSE board."
+        },
+        {
+          "id": "awards-1",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "DST-INSPIRE fellow (Scholarship from August’15 for undergraduate studies)"
+        },
+        {
+          "id": "awards-2",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Qualified All India Joint Entrance Examination (main) in 2015"
+        },
+        {
+          "id": "awards-3",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Qualified West Bengal Joint Entrance Examination (WBJEE) in 2015"
+        },
+        {
+          "id": "awards-4",
+          "title": "",
+          "organization": "",
+          "date": "",
+          "details": "Qualified All India Entrance Test for admission in IISER’s"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "type": "general",
+      "visible": true,
+      "entries": [
+        {
+          "id": "references-0",
+          "title": "Prof. Ranjit Thapa",
+          "organization": "Professor, Department of Physics, SRM University – AP",
+          "date": "",
+          "details": "Supervisor\nAndhra Pradesh 522502, India\nranjit.t@srmap.edu.in; ranjit.phy@gmail.com"
+        },
+        {
+          "id": "references-1",
+          "title": "Dr. Saikat Das",
+          "organization": "Senior Assistant Professor, Institute of Multidisciplinary Research for Advanced Materials, Tohoku University",
+          "date": "",
+          "details": "Katahira 2-1-1, Aoba-ku, Sendai 980-8577, Japan\ndas.saikat.c4@tohoku.ac.jp"
+        },
+        {
+          "id": "references-2",
+          "title": "Dr. Pradip Pachfule",
+          "organization": "Assistant Professor, S. N. Bose National Centre for Basic Sciences",
+          "date": "",
+          "details": "Salt Lake, JD Block, Sector 3, Bidhannagar, Kolkata, West Bengal 700106\nps.pachfule@bose.res.in"
+        }
+      ]
+    }
+  ]
+}

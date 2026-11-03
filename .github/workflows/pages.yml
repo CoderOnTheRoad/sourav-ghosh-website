@@ -1,0 +1,49 @@
+name: Publish personal website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: personal-website-pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check website and publishing service
+        run: |
+          node --check shared.js
+          node --check site.js
+          node --check admin.js
+          node --check cv/shared-bridge.js
+          node --check server/auth-worker.mjs
+          node tests/shared.test.cjs
+          node tests/auth.test.mjs
+      - name: Check CV editor and exports
+        working-directory: cv
+        run: |
+          node tests/bibtex.test.cjs
+          node tests/scopus.test.cjs
+          node tests/studio.test.cjs
+          node tests/layout.test.cjs
+          node tests/default.test.cjs
+      - uses: actions/configure-pages@v5
+      - name: Prepare published website
+        run: node scripts/prepare.cjs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
